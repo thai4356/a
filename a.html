@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular</title>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/a.js"></script>
+</head>
+<body>
+
+<!--    <div ng-controller = "firstController">-->
+<!--        {{name}}-->
+<!--    </div>-->
+
+
+<!--<a href="#!/home">kem</a>-->
+<!--<a href="#!/about">kem2</a>-->
+<!--<ng-view></ng-view>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th>name</th>-->
+<!--        <th>price</th>-->
+<!--    </tr>-->
+<!--    <tr ng-repeat="item in products">-->
+<!--        <td>{{name}}</td>-->
+<!--        <td>{{price}}</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<br>-->
+<!--5 + 6 = {{5+6}}-->
+<!--<br>-->
+<!--name1 and name2 are {{name1 + " " + name2}}-->
+<!--<p ng-bind="name1"></p>-->
+<!--<input ng-model="name1"></input>-->
+<!--</body>-->
+<!--<body ng-controller = "secondController">-->
+<!--{{name1}}-->
+<!--<br>-->
+<!--5 + 6 = {{5+6}}-->
+<!--<br>-->
+<!--name1 and name2 are {{name1 + " " + name2}}-->
+<!--<p ng-bind="name1"></p>-->
+<!--<input ng-model="name1"></input>-->
+
+
+
+<div ng-app="myApp" ng-controller="firstController" >
+    <table border="1" width="100%">
+        <tr>
+            <th ng-click="orderByMe('name')">Brand</th>
+            <th ng-click="orderByMe('country')">Price</th>
+            <th >Date of production</th>
+            <th >Expired date</th>
+        </tr>
+        <tr ng-repeat="x in names | orderBy:'price' ">
+            <td>{{x.name}}</td>
+            <td>{{x.price | currency}}</td>
+            <td>{{x.DOP}}</td>
+            <td>{{x.ED}}</td>
+        </tr>
+    </table>
+</div>
+
+<form>
+    show massage : <input type="checkbox" ng-model="checkBox">
+    Male : <input type="radio" ng-model="sex" value="Male">
+    Female : <input type="radio" ng-model="sex" value="Female">
+    <select ng-model="sex">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+</form>
+    <div ng-show="checkBox">Hello World</div>
+<div ng-switch="sex">
+    <div ng-switch-when="Male">You re Male</div>
+    <div ng-switch-when="Female">You re gay</div>
+</div>
+<form name="myForm">
+    Name : <input type="text" name="name" ng-model="student.name" required>
+    <span ng-style="invalid" ng-show="myForm.name.$invalid && myForm.name.$touched"></span>
+    Job : <input type="text" name="students" ng-model="student.job" required>
+    <span ng-style="invalid" ng-show="myForm.job.$invalid && myForm.job.$touched"></span>
+    <input type="hidden" ng-model="indexItem">
+    <button ng-click="addStudent(student)">Submit</button>
+</form>
+<form>
+    pristine:{{myForm.name.$pristine}}<br>
+    invalid:{{myForm.name.$invalid}}<br>
+    valid:{{myForm.name.$valid}}<br>
+    touched:{{myForm.name.$touched}}<br>
+    untouched:{{myForm.name.$untouched}}<br>
+    dirty:{{myForm.name.$dirty}}<br>
+</form>
+<table border="1">
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th colspan="2">Active</th>
+    </tr>
+    <tr ng-repeat="item in students">
+        <td>{{$index}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.job}}</td>
+        <td ng-click="editStudent(item)">Edit</td>
+    </tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+</body>
+<!--<body ng-init="cities =['vn','lao','china']">-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th>City</th>-->
+<!--    </tr>-->
+<!--    <tr ng-repeat="city in cities">-->
+<!--        <td>{{city| myFilter}}</td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--<my-custom-directives></my-custom-directives>-->
+<!--</body>-->
+</html>
