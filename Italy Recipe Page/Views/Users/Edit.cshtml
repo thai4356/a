@@ -1,0 +1,99 @@
+﻿@model Italy_Recipe_Page.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div>
+            <a asp-controller="Home" asp-action="Index">Back to homepage</a>
+        </div>
+
+        <form asp-action="Edit" class="my-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" />
+
+            <!-- Username -->
+            <div class="form-group">
+                <label asp-for="Username" class="control-label">Username</label>
+                <input asp-for="Username" class="form-control" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label">Password</label>
+                <input asp-for="Pass" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+
+            <!-- Gmail -->
+            <div class="form-group">
+                <label asp-for="Gmail" class="control-label">Gmail</label>
+                <input asp-for="Gmail" class="form-control" />
+                <span asp-validation-for="Gmail" class="text-danger"></span>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label asp-for="PhoneNo" class="control-label">Phone Number</label>
+                <input asp-for="PhoneNo" class="form-control" />
+                <span asp-validation-for="PhoneNo" class="text-danger"></span>
+            </div>
+
+            <!-- Image -->
+            <div class="form-group">
+                <label asp-for="Image" class="control-label">Image</label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>        
+
+            <!-- Role End Date -->
+            <div class="form-group">
+                <label asp-for="RoleEndDate" class="control-label">Membership date expired: </label>
+                <input asp-for="RoleEndDate" class="form-control" />
+                <span asp-validation-for="RoleEndDate" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+<style>
+     .my-form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border: 1px solid #e5e5e5;
+        border-radius: 5px;
+    }
+
+    /* Input fields */
+    .my-form input[type="text"],
+    .my-form input[type="password"],
+    .my-form input[type="email"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 2px solid red;
+        border-radius: 4px;
+    }
+
+    /* Focused input */
+    .my-form input[type="text"]:focus,
+    .my-form input[type="password"]:focus,
+    .my-form input[type="email"]:focus {
+        background-color: lightblue;
+        border: 3px solid #555;
+    }
+</style>
+

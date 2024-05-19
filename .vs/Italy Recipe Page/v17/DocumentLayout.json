@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\views\\shared\\indexpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\views\\shared\\indexpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\viewcomponents\\categoryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\viewcomponents\\categoryviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\repository\\recipecatrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\repository\\recipecatrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\repository\\recipecategoryinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\repository\\recipecategoryinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\views\\shared\\components\\category\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\views\\shared\\components\\category\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|c:\\users\\admin\\source\\repos\\italy recipe page\\italy recipe page\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{81AF21B8-E969-4C36-BC98-E9BBD92BA309}|Italy Recipe Page\\Italy Recipe Page.csproj|solutionrelative:italy recipe page\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 180,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryViewComponent.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\ViewComponents\\CategoryViewComponent.cs",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\ViewComponents\\CategoryViewComponent.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\ViewComponents\\CategoryViewComponent.cs",
+              "RelativeToolTip": "Italy Recipe Page\\ViewComponents\\CategoryViewComponent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T19:42:27.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "RelativeToolTip": "Italy Recipe Page\\Views\\Shared\\Components\\Category\\Default.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-18T16:22:11.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IndexPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\IndexPage.cshtml",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Views\\Shared\\IndexPage.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\IndexPage.cshtml",
+              "RelativeToolTip": "Italy Recipe Page\\Views\\Shared\\IndexPage.cshtml",
+              "ViewState": "AQIAAAcBAAAAAAAAAAASwNkAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-18T16:21:35.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecipeCatRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Repository\\RecipeCatRepo.cs",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Repository\\RecipeCatRepo.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Repository\\RecipeCatRepo.cs",
+              "RelativeToolTip": "Italy Recipe Page\\Repository\\RecipeCatRepo.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAgwAQAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T16:21:17.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecipeCategoryInterface.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Repository\\RecipeCategoryInterface.cs",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Repository\\RecipeCategoryInterface.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Repository\\RecipeCategoryInterface.cs",
+              "RelativeToolTip": "Italy Recipe Page\\Repository\\RecipeCategoryInterface.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T16:21:13.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Italy Recipe Page\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-18T12:58:07.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Italy Recipe Page\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Italy Recipe Page\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-18T12:49:54.028Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
