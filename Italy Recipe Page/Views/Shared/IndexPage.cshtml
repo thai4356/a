@@ -1,84 +1,13 @@
-﻿@model X.PagedList.IPagedList<Recipe>
+﻿@{
+	Layout = "_Layout";
+}
+
+@model X.PagedList.IPagedList<Recipe>
 @using X.PagedList.Mvc.Core
 @inject IHttpContextAccessor Accessor;
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="~/css/site.css" />
-	<link rel="stylesheet" href="~/css/base.css" >
-	<script src="https://kit.fontawesome.com/82bbb3ea06.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="~/css/style.css">
-	<link rel="stylesheet" href="~/css/green.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-</head>
 
-	<!-- Header
-		================================================== -->
-	<header id="header">
-
-		<!-- Container -->
-		<div class="container">
-
-			<!-- Logo / Mobile Menu -->
-			<div class="three columns">
-				<div id="logo">
-					<h1><a href="index.html"><img src="image/logo.png" alt="Chow" /></a></h1>
-				</div>
-			</div>
-
-			<!-- Navigation
-			================================================== -->
-			<div class="thirteen columns navigation">
-
-				<nav id="navigation" class="menu nav-collapse">
-					<ul>
-						<li>
-						<a asp-controller="Home" asp-action="Index" id="current">Home</a>
-					</li>
-
-						<li>
-							<a >Category</a>
-							<ul>
-								<li>@await Component.InvokeAsync("Category")</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#">Tips</a>
-							<ul>
-							<@* ---- *@
-							</ul>
-						</li>
-
-						<li>
-							<a href="#">Submission</a>
-							<ul>
-							@* ---- *@
-							</ul>
-						</li>
-
-						<li><a href="submit-recipe.html">Contest</a></li>
-					@if (Accessor.HttpContext.Session.GetString("Username") == null)
-					{
-						<li><a asp-controller="Access" asp-action="Login"> <i class="fa-solid fa-user"></i></a></li>
-					}
-					else
-					{
-						<li><a asp-controller="Users" asp-action="Edit" asp-route-id="@Accessor.HttpContext.Session.GetString("id")"> update info</a></li>
-						<li><a asp-controller="Access" asp-action="Logout"> Log out</a></li>
-					}
-				</ul>
-				</nav>
-
-			</div>
-
-		</div>
-		<!-- Container / End -->
-	</header>
 
 
 	
@@ -107,13 +36,7 @@
 
 						<h2 class="rsSlideTitle title"><a href="recipe-page-1.html">@item.RecipeName</a></h2>
 
-							<div class="rsSlideTitle details">
-								<ul>
-								<li><i class="fa fa-cutlery"></i> @item.Calories</li>
-								<li><i class="fa fa-clock-o"></i>@item.Category</li>
-								<li><i class="fa fa-user"></i> @item.PreparationTime<a href="#">@item.RecipeName</a></li>
-								</ul>
-							</div>
+							
 
 						<a asp-controller="Home" asp-action="RecipeDetail" asp-route-maSP="@item.RecipeId" class="rsSlideTitle button">View Recipe</a>
 						</div>
@@ -147,7 +70,7 @@
 								<!-- Thumbnail -->
 								<div class="thumbnail-holder">
 									<a asp-controller="Home" asp-action="RecipeDetail" asp-route-maSP="@item.RecipeId">
-										<img src="image/@item.Img" , alt="" />
+										<img src="image/@item.Img" style="width:100%;height:100%"/>
 										<div class="hover-cover"></div>
 										<div class="hover-icon">View Recipe</div>
 									</a>
@@ -157,7 +80,7 @@
 								<div class="recipe-box-content">
 							<h3><a asp-controller="Home" asp-action="RecipeDetail" asp-route-maSP="@item.RecipeId">@item.RecipeName</a></h3>
 
-									<p>@item.Description</p>
+									<p class="truncate">@item.Description</p>
 
 									<div class="rating five-stars">
 										<div class="star-rating"></div>
@@ -165,9 +88,7 @@
 									</div>
 
 									<div class="meta-alignment">
-										<div class="recipe-meta"><i class="fa fa-user"></i> by <a href="#">@item.UserId</a></div>
-										<div class="recipe-meta"><i class="fa fa-clock-o"></i> @item.RecipeRole</div>
-										<div class="recipe-meta"><i class="fa fa-cutlery"></i> @item.Category</div>
+										<div class="recipe-meta"><i class="fa fa-clock-o"></i> @item.CookDuration</div>
 									</div>
 
 									<div class="clearfix"></div>
@@ -182,7 +103,9 @@
 					
 					<!-- Pagination -->
 			<div class="pagination">
-				@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+				<ul>
+				<li class="current-page">@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))</li>
+				</ul>
 			</div>
 					
 				</div>
@@ -269,86 +192,10 @@
 		<!-- Wrapper / End -->
 		<!-- Footer
 		================================================== -->
-		<div id="footer">
+		
 
-			<!-- Container -->
-			<div class="container">
-
-				<div class="five columns">
-					<!-- Headline -->
-					<h3 class="headline footer">About</h3>
-					<span class="line"></span>
-					<div class="clearfix"></div>
-					<p>Cras at ultrices erat, sed vulputate eros. Nunc at augue gravida est fermentum vulputate. Pellentesque et ipsum in dui malesuada tempus.</p>
-				</div>
-
-				<div class="three columns">
-
-					<!-- Headline -->
-					<h3 class="headline footer">Archives</h3>
-					<span class="line"></span>
-					<div class="clearfix"></div>
-
-					<ul class="footer-links">
-						<li><a href="#">June 2014</a></li>
-						<li><a href="#">July 2014</a></li>
-						<li><a href="#">August 2014</a></li>
-						<li><a href="#">September 2014</a></li>
-						<li><a href="#">November 2014</a></li>
-					</ul>
-
-				</div>
-
-				<div class="three columns">
-
-					<!-- Headline -->
-					<h3 class="headline footer">Recipes</h3>
-					<span class="line"></span>
-					<div class="clearfix"></div>
-
-					<ul class="footer-links">
-						<li><a href="browse-recipes.html">Browse Recipes</a></li>
-						<li><a href="recipe-page-1.html">Recipe Page</a></li>
-						<li><a href="submit-recipe.html">Submit Recipe</a></li>
-					</ul>
-
-				</div>
-
-				<div class="five columns">
-
-					<!-- Headline -->
-					<h3 class="headline footer">Newsletter</h3>
-					<span class="line"></span>
-					<div class="clearfix"></div>
-					<p>Sign up to receive email updates on new product announcements, gift ideas, sales and more.</p>
-
-					<form action="#" method="get">
-						<input class="newsletter" type="text" placeholder="mail@example.com" value="" />
-						<button class="newsletter-btn" type="submit">Subscribe</button>
-
-					</form>
-				</div>
-
-			</div>
-			<!-- Container / End -->
-
-		</div>
-		<!-- Footer / End -->
-		<!-- Footer Bottom / Start -->
-		<div id="footer-bottom">
-
-			<!-- Container -->
-			<div class="container">
-
-				
-
-			</div>
-			<!-- Container / End -->
-
-		</div>
 		<!-- Footer Bottom / End -->
-		<!-- Back To Top Button -->
-		<div id="backtotop"><a href="#"></a></div>
+
 
 
 
@@ -413,9 +260,12 @@
 		</script>
 
 <style>
-	.container img {
-		height: 100%;
-		width: 100%;
-	}
-	.container img { object-fit: contain; /* or object-fit: cover; */ }
+.truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
 </style>

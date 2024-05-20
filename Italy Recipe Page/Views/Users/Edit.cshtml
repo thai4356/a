@@ -42,17 +42,17 @@
                 <span asp-validation-for="PhoneNo" class="text-danger"></span>
             </div>
 
-            <!-- Image -->
             <div class="form-group">
-                <label asp-for="Image" class="control-label">Image</label>
-                <input asp-for="Image" class="form-control" />
-                <span asp-validation-for="Image" class="text-danger"></span>
-            </div>        
+                <label asp-for="UserRole" class="control-label">User Role</label>
+                <input asp-for="UserRole" class="form-control" readonly />
+                <span asp-validation-for="UserRole" class="text-danger"></span>
+            </div>
 
+          
             <!-- Role End Date -->
             <div class="form-group">
                 <label asp-for="RoleEndDate" class="control-label">Membership date expired: </label>
-                <input asp-for="RoleEndDate" class="form-control" />
+                <input asp-for="RoleEndDate" class="form-control" readonly />
                 <span asp-validation-for="RoleEndDate" class="text-danger"></span>
             </div>
 

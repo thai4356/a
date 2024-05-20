@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JY6rlAnu2t3n32y+6/1yHajB73BT8saFSwp9dmeVMDY=",
+  "Hash": "Kx9gzFPveyhP6vrvcl51kVsDcPqBKAP1vspSTp8s/HY=",
   "Source": "Italy Recipe Page",
   "BasePath": "_content/Italy Recipe Page",
   "Mode": "Default",
@@ -699,25 +699,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\sliderA_04.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\wwwroot\\Image\\switcher.png",
-      "SourceId": "Italy Recipe Page",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\wwwroot\\",
-      "BasePath": "_content/Italy Recipe Page",
-      "RelativePath": "Image/switcher.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Image\\switcher.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\source\\repos\\Italy Recipe Page\\Italy Recipe Page\\wwwroot\\js\\chosen.jquery.min.js",

@@ -255,3 +255,4 @@ C:\Users\Admin\source\repos\Italy Recipe Page\Italy Recipe Page\obj\Debug\net8.0
 C:\Users\Admin\source\repos\Italy Recipe Page\Italy Recipe Page\obj\Debug\net8.0\ref\Italy Recipe Page.dll
 C:\Users\Admin\source\repos\Italy Recipe Page\Italy Recipe Page\obj\Debug\net8.0\Italy Recipe Page.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Admin\source\repos\Italy Recipe Page\Italy Recipe Page\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+C:\Users\Admin\source\repos\Italy Recipe Page\Italy Recipe Page\obj\Debug\net8.0\Italy Recipe Page.sourcelink.json

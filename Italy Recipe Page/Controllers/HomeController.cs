@@ -1,11 +1,9 @@
-using Italian_Restaurant_1.Models;
+using Italy_Recipe_Page.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Italian_Restaurant_1.Models.Authentication;
 using X.PagedList;
-using Italy_Recipe_Page.Models;
 
 namespace Italian_Restaurant_1.Controllers
 {
@@ -25,27 +23,45 @@ namespace Italian_Restaurant_1.Controllers
 			int pageNumber = page == null || page < 0 ? 1 : page.Value;
 			var ListRecipe = db.Recipes.AsNoTracking().OrderBy(x => x.RecipeName);
 			PagedList<Recipe> lst = new PagedList<Recipe>(ListRecipe, pageNumber, pageSize);
-			//var ListCategory = db.Categories.ToList();
-			//var viewModel = new RecipeCategoryViewModel
-			//{
-			//	Recipes = ListRecipe,
-			//	Categories = ListCategory
-			//};
 			return View(lst);
 		}
 
 		public IActionResult RecipeDetail(int maSp)
 		{
-			var Recipe = db.Recipes.SingleOrDefault(x => x.RecipeId == maSp); 
-			var img = db.Recipes.Where(x => x.RecipeId == maSp).ToList(); 
-			ViewBag.img = img;
-			return View(Recipe);
+			int x=0;
+            var Recipe = db.Recipes.SingleOrDefault(x => x.RecipeId == maSp); 
+			List<Ingredient> res = (from t in db.Ingredients join t2 in db.RecipeDetails on t.Id equals t2.IngredientId where t2.RecipeId == maSp select t).ToList();
+			var ListRecipe = db.Recipes.AsNoTracking().OrderBy(x => x.RecipeName).ToList();
+			var viewModel = new RecipeViewModel
+			{
+				Recipe = Recipe,
+				Ingredients = res,
+				Recipes = ListRecipe,
+			};
+			if (string.IsNullOrEmpty(HttpContext.Session.GetString("UserRole")))
+			{
+				x = 0;
+			}
+			else
+			{
+				x = Int32.Parse(HttpContext.Session.GetString("UserRole"));
+			}
+
+            if (x >= Int32.Parse(Recipe.RecipeRole))
+			{
+				return View(viewModel);
+			}
+			return View("~/Views/Shared/NotificationRole.cshtml");
+
 		}
 
-		public IActionResult CategoryRecipe(int maLoai)
+		public IActionResult CategoryRecipe(int maLoai, int? page)
 		{
-			List<Recipe> ListRecipe = db.Recipes.Where(x => x.Category == maLoai).OrderBy(x => x.RecipeName).ToList();
-			return View(ListRecipe);
+			int pageSize = 5;
+			int pageNumber = page == null || page < 0 ? 1 : page.Value;
+			var ListRecipe = db.Recipes.Where(x => x.Category == maLoai).OrderBy(x => x.RecipeName).AsNoTracking().OrderBy(x => x.RecipeName);
+			PagedList<Recipe> lst = new PagedList<Recipe>(ListRecipe, pageNumber, pageSize);
+			return View(lst);
 			
 		}
 
@@ -58,9 +74,37 @@ namespace Italian_Restaurant_1.Controllers
 				select t
 				).ToList();
 
-			// Pass the List of results to a Partial View 
 			return View(res);
 		}
+
+		     public IActionResult SubmitPage(FullRecipe model)
+		     {
+		//		var client = new Recipe
+		//		{
+		//			RecipeName = model.Recipes,
+		//			Birthday = model.Birthday
+		//		};
+
+		//		var client = new Recipe
+		//		{
+		//			Name = model.Name,
+		//			Birthday = model.Birthday
+		//		};
+
+		//	var clientDetails = new ClientDetails();
+
+		////etc for your other entities
+
+		//	using (var context = new ItalyContext)
+		//	{
+		//		context.Clients.Add(client);
+		//		clientDetails.ClientId = client.Id;
+		//		context.ClientDetails.Add(clientDetails);
+		//		//etc add your other classes
+		//		context.SaveChanges();
+		//	}
+			return View();
+		     }
 
 		public IActionResult Privacy()
 		{
